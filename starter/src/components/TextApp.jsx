@@ -16,7 +16,7 @@ function TextApp() {
     /**
      * Called when the TextApp initially mounts.
      */
-    async function handleWelcome() {
+    function handleWelcome() {
         if (messages.length === 0) {
             addMessage(Constants.Roles.Assistant, "Welcome, my name is Bucky. How can I help you?");
         }
@@ -26,7 +26,7 @@ function TextApp() {
      * Called whenever the "Send" button is pressed.
      * @param {Event} e default form event; used to prevent from reloading the page.
      */
-    async function handleSend(e) {
+    function handleSend(e) {
         e?.preventDefault();
         const input = inputRef.current.value?.trim();
         setIsLoading(true);
